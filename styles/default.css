@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+ file name  :  default.css
+ style info : 
+=================================================================== */
+body {
+	background: #fff;
+	color: #000;
+	font:13px "メイリオ", Meiryo, sans-serif, "ＭＳ Ｐゴシック","MS PGothic","ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "宋体",Gulim;
+    *font-size:small;
+    *font:x-small;
+	line-height: 1.98;
+	letter-spacing:100%;
+	
+}
+* html body {	/* for IF6 */
+	font-family: "ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+}
+/* Font Size --------------------------------- */
+p,li,dt,dd,th,td {	font-size: 100%;}
+li p,dd p,li li,dd li,th p,td p {	font-size: 100%;}
+h1,h2,h3,h4,h5,h6 {	font-size: 100%;}
+table {	font-size: inherit; font-size: 100%;}
+img{ vertical-align: bottom;}
+/* line-height --------------------------------- */
+p,li,dt,dd,th,td {    line-height: 1.98;}
+/*Safari*/
+body:first-of-type p,
+body:first-of-type li,
+body:first-of-type dt,
+body:first-of-type dd,
+body:first-of-type th,
+body:first-of-type td {    line-height: 1.98;}
+/**/
+html:not(:only-child:only-child) p,
+html:not(:only-child:only-child) li,
+html:not(:only-child:only-child) dt,
+html:not(:only-child:only-child) dd,
+html:not(:only-child:only-child) th,
+html:not(:only-child:only-child) td { font-size: 100%;}
+
+a{overflow:hidden;
+outline:none;
+color: #000;
+text-decoration: none;
+}
+
+/* clearfix --------------------------------- */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/* html5 for ie6 7 8 --------------------------------------------------------------------*/
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary
+{
+	display:block;
+}
+
+/* */
+/*---------------------------------------------------------------------*/
+/*------------------------------------------------------*/
+/* noneImages */
+/*------------------------------------------------------*/
+.noneImages {
+	display: none;
+}
+.nf-message { display: none; }
