@@ -1,23 +1,24 @@
 <?php
 
+global $yield;
+
 //タイムゾーンを設定
-date_default_timezone_set('Asia/Tokyo');	
+date_default_timezone_set('Asia/Tokyo');
 
 require_once("model.php");
-	
-$title_text = $_POST['text'].$_POST['title'];
 
 // タイトル、本文どちらも空でない場合
-if ( $_POST['send'] != "" && $title_text != "" ) {
-  
-  // 投稿データを格納
-	post_data();
+if ( isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' )
+{
+  // Do validate
+  if ( !empty($_POST['title']) && !empty($_POST['text']) )
+  {
+    post_data();// 投稿データを格納
+  }
 }
 
 // 表示するデータの読み込み
-disp_data();
+$yield = disp_data();
 
 // 描画
 require_once('view.php');
-
-?>
